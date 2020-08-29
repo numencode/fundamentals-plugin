@@ -3,9 +3,10 @@
 return [
     'plugin'    => [
         'name'        => 'Fundamentals',
-        'description' => 'NumenCode fundamentals for October CMS.'
+        'description' => 'NumenCode fundamentals for October CMS.',
     ],
     'field'     => [
+        'id'                   => 'ID',
         'title'                => 'Title',
         'subtitle'             => 'Subtitle',
         'description'          => 'Description',
