@@ -1,9 +1,8 @@
 <?php namespace NumenCode\Fundamentals\Console;
 
-use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
-class MediaCloudCommand extends Command
+class MediaCloudCommand extends RemoteCommand
 {
     protected $signature = 'media:cloud {cloud? : The name of the cloud (default: dropbox)}';
 

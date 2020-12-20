@@ -12,6 +12,6 @@ class MediaPullCommand extends RemoteCommand
             return;
         }
 
-        $this->sshRunAndPrint(['php artisan media:cloud dropbox']);
+        $this->sshRunAndPrint(['sudo php artisan media:cloud dropbox']);
     }
 }
