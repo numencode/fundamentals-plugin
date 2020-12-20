@@ -41,7 +41,7 @@ class MediaPullCommand extends RemoteCommand
         $files = $cloudStorage->allFiles();
         $bar = 1;
 
-        $this->info('Downloading ' . count($files) . ' files from the cloud storage...');
+        $this->question('Downloading ' . count($files) . ' files from the cloud storage...');
 
         foreach ($files as $file) {
             $this->progressBar($bar, count($files));
@@ -54,6 +54,6 @@ class MediaPullCommand extends RemoteCommand
             $localStorage->put($file, $localStorage->get($file));
         }
 
-        $this->info('All files successfully downloaded to the local storage.');
+        $this->alert('All files successfully downloaded to the local storage.');
     }
 }
