@@ -1,9 +1,12 @@
 <?php namespace NumenCode\Fundamentals\Console;
 
 use Illuminate\Support\Facades\Storage;
+use NumenCode\Fundamentals\Traits\ProgressBar;
 
 class MediaPullCommand extends RemoteCommand
 {
+    use ProgressBar;
+
     protected $signature = 'media:pull
         {server : The name of the remote server}
         {cloud? : The name of the cloud storage (default: dropbox)}
