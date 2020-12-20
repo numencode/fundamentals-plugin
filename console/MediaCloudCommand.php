@@ -23,7 +23,9 @@ class MediaCloudCommand extends Command
 
         $bar = 1;
 
-        $this->question('Uploading ' . count($files) . ' files to the cloud storage...');
+        $this->line('');
+
+        $this->info('Uploading ' . count($files) . ' files to the cloud storage...');
 
         foreach ($files as $file) {
             $this->progressBar($bar, count($files));
@@ -36,6 +38,6 @@ class MediaCloudCommand extends Command
             $cloudStorage->put($file, Storage::get($file));
         }
 
-        $this->alert('All files successfully uploaded to the cloud storage.');
+        $this->info('All files successfully uploaded to the cloud storage.');
     }
 }
